@@ -9,6 +9,7 @@
 import Combine
 
 final class MockUserManager: UserManagerProtocol {
+    var ballances: [Ballance] = []
     var user: CurrentValueSubject<Bool, Never> = .init(false)
 
     func setUser(_ newUser: Bool) {

@@ -12,15 +12,18 @@ protocol Endpoint {
 }
 
 enum ApiEndpoints: Endpoint {
-    case currency
+    case usdExchangeRate
     case crypto
+    case cryptoHistory(Currency)
 
     private var url: URL? {
         switch self {
         case .crypto:
             URL(string: "https://api.wazirx.com/sapi/v1/tickers/24hr")
-        case .currency:
+        case .usdExchangeRate:
             URL(string: "https://open.er-api.com/v6/latest/USD")
+        case .cryptoHistory(let currency):
+            URL(string: "https://api.wazirx.com/sapi/v1/klines?symbol=\(currency.rawValue)usdt&limit=14&interval=1d")
         }
     }
 

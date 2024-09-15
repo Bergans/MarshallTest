@@ -16,6 +16,8 @@ final class MarshallCryptoAppModel: ObservableObject {
     var walletViewModel: WalletViewModel { .init(managerProvider: managerProvider) }
 
     init() {
-        managerProvider.userManager.user.assign(to: &$isLoggedIn)
+        managerProvider.userManager.user
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$isLoggedIn)
     }
 }

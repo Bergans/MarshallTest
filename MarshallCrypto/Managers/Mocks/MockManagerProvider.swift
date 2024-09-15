@@ -8,5 +8,6 @@
 #if DEBUG
 final class MockManagerProvider: ManagerProviderProtocol {
     let userManager: UserManagerProtocol = MockUserManager()
+    let dataManager: DataManagerProtocol = MockDataManager()
 }
 #endif

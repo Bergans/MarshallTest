@@ -9,21 +9,32 @@ import SwiftUI
 
 @main
 struct MarshallCryptoApp: App {
-#if DEBUG
+    enum NavigationDestination: Hashable {
+        case wallet
+    }
+
     @StateObject var viewModel: MarshallCryptoAppModel = MarshallCryptoAppModel()
-#else
-    @StateObject var viewModel: MarshallCryptoAppModel = MarshallCryptoAppModel()
-#endif
+    @State var navigationPath = NavigationPath()
 
     var body: some Scene {
         WindowGroup {
-            if viewModel.isLoggedIn {
-                WalletView(viewModel: viewModel.walletViewModel)
-                    .animation(.easeIn, value: 2)
-            } else {
+            NavigationStack(path: $navigationPath) {
                 LoginView(viewModel: viewModel.loginViewModel)
-                    .animation(.easeIn, value: 2)
+                    .navigationDestination(for: NavigationDestination.self) { destination in
+                        switch destination {
+                        case .wallet:
+                            WalletView(viewModel: viewModel.walletViewModel)
+                                .navigationBarBackButtonHidden(true)
+                        }
+                    }
             }
+            .onReceive(viewModel.$isLoggedIn) {
+                navigationPath = NavigationPath()
+                if $0 {
+                    navigationPath.append(NavigationDestination.wallet)
+                }
+            }
+
         }
     }
 }
