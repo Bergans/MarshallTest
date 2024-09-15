@@ -20,6 +20,7 @@ final class HistoryViewModel: ObservableObject {
 
     @Published var isLoading = true
     @Published var chartData: [HistoryRow] = []
+    @Published var error: String?
 
     init(managerProvider: ManagerProviderProtocol, currency: Currency) {
         self.managerProvider = managerProvider
@@ -31,11 +32,19 @@ final class HistoryViewModel: ObservableObject {
 
 private extension HistoryViewModel {
     func getData() {
-        Task {
-            let response = try await dataManager.getHistory(for: currency)
-            await MainActor.run {
-                chartData = response.map { .init(date: $0.0, rate: $0.1) }
-                isLoading = false
+        Task { [weak self] in
+            guard let self else { return }
+            do {
+                let response = try await dataManager.getHistory(for: currency)
+                await MainActor.run { [weak self] in
+                    self?.chartData = response.map { .init(date: $0.0, rate: $0.1) }
+                    self?.isLoading = false
+                }
+            } catch {
+                await MainActor.run { [weak self] in
+                    self?.error = "Can't Load Historical data"
+                    self?.isLoading = false
+                }
             }
         }
     }

@@ -59,9 +59,12 @@ final class DataManager: DataManagerProtocol {
 
         let response = try await getCurrencyHistory(for: currency)
         response.forEach {
-            let date = Date(timeIntervalSince1970: $0[0])
-            let value = $0[1]
-            history.append((date, value))
+            if case let JSONValue.int(date) = $0[0],
+               case let JSONValue.string(price) = $0[1] {
+                let chartDate = Date(timeIntervalSince1970: Double(date/1000))
+                let value = Double(price) ?? 0
+                history.append((chartDate, value))
+            }
         }
 
         return history
@@ -99,7 +102,7 @@ private extension DataManager {
         try await apiManager.request(ApiEndpoints.usdExchangeRate)
     }
 
-    func getCurrencyHistory(for currency: Currency) async throws -> [[Double]] {
+    func getCurrencyHistory(for currency: Currency) async throws -> [[JSONValue]] {
         try await apiManager.request(ApiEndpoints.cryptoHistory(currency))
     }
 }

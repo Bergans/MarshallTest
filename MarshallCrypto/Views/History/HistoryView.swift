@@ -16,12 +16,15 @@ struct HistoryView: View {
     }
 
     var body: some View {
-        Text("HistoryView")
+        Text("Historical prices last 2 weeks")
+            .font(.largeTitle)
+            .padding(.bottom, 16)
         if viewModel.isLoading {
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle())
                 .scaleEffect(1.5, anchor: .center)
         } else {
+            ErrorView(errorText: $viewModel.error)
             Chart(viewModel.chartData) { history in
                 LineMark(
                     x: .value("Date", history.date),
