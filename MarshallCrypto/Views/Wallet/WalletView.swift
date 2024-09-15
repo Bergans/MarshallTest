@@ -30,30 +30,11 @@ struct WalletView: View {
                 Text("Total: \(viewModel.total)")
                     .font(.largeTitle)
                     .padding(.bottom, 16)
-                Grid(alignment: .leading) {
-                    GridRow {
-                        Text("Crypto Currency")
-                            .bold()
-                            .padding(.trailing, 16)
-                        Text("Amount")
-                            .bold()
-                            .padding(.trailing, 16)
-                        Text("$")
-                            .bold()
-                            .padding(.trailing, 16)
-                    }
-
-                    ForEach(viewModel.ballances, id: \.self.currency) { ballance in
-                        GridRow {
-                            Text(ballance.currency.name)
-                            Text(ballance.displayAmount)
-                            Text(ballance.amountInUsd.asCurrency(.usd))
-                        }
-                        .onTapGesture {
-                            currencyHistory = ballance.currency
-                        }
-                    }
-                }
+                Text("Tap on currency to see price history")
+                    .font(.footnote)
+                    .foregroundStyle(.placeholder)
+                    .padding(.bottom, 8)
+                currenciesGrid(viewModel.ballances)
             }
         }
         .padding(.horizontal, 16)
@@ -66,6 +47,33 @@ struct WalletView: View {
         }
         .sheet(item: $currencyHistory) {
             HistoryView(viewModel: viewModel.historyViewModel(for: $0))
+        }
+    }
+
+    func currenciesGrid(_ ballances: [Ballance]) -> some View {
+        Grid(alignment: .leading) {
+            GridRow {
+                Text("Crypto Currency")
+                    .bold()
+                    .padding(.trailing, 16)
+                Text("Amount")
+                    .bold()
+                    .padding(.trailing, 16)
+                Text("$")
+                    .bold()
+                    .padding(.trailing, 16)
+            }
+
+            ForEach(ballances, id: \.self.currency) { ballance in
+                GridRow {
+                    Text(ballance.currency.name)
+                    Text(ballance.displayAmount)
+                    Text(ballance.amountInUsd.asCurrency(.usd))
+                }
+                .onTapGesture {
+                    currencyHistory = ballance.currency
+                }
+            }
         }
     }
 }
