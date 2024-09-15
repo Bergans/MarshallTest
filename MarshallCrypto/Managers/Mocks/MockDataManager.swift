@@ -9,16 +9,17 @@
 import Foundation
 
 final class MockDataManager: DataManagerProtocol {
-    func getCryptoRates() async throws -> [Currency : Double] {
-        [.btc: 7325.0]
-    }
-    
+    var ballances: [Ballance] = []
+    var usdToSek = 10.0
+
     func getUsdToSek() async throws -> Double {
-        10.232194
+        usdToSek
     }
 
     func getHistory(for currency: Currency) async throws -> [(Date, Double)] {
         []
     }
+
+    func getBallances() async throws ->  [Ballance] { ballances }
 }
 #endif

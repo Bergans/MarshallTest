@@ -5,7 +5,7 @@
 //  Created by Janis Bergs on 2024-09-15.
 //
 
-struct Ballance {
+struct Ballance: Equatable {
     let currency: Currency
     let amount: Double
     let amountInUsd: Double

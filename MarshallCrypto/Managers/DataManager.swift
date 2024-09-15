@@ -8,9 +8,9 @@
 import Foundation
 
 protocol DataManagerProtocol {
-    func getCryptoRates() async throws -> [Currency: Double]
     func getUsdToSek() async throws -> Double
     func getHistory(for currency: Currency) async throws -> [(Date, Double)]
+    func getBallances() async throws ->  [Ballance]
 }
 
 final class DataManager: DataManagerProtocol {
@@ -37,7 +37,7 @@ final class DataManager: DataManagerProtocol {
         }
     }
 
-    func getCryptoRates() async throws -> [Currency: Double] {
+    private func getCryptoRates() async throws -> [Currency: Double] {
         guard cryptoRates.isEmpty else {
             return cryptoRates
         }
@@ -60,11 +60,32 @@ final class DataManager: DataManagerProtocol {
         let response = try await getCurrencyHistory(for: currency)
         response.forEach {
             let date = Date(timeIntervalSince1970: $0[0])
-            let value = $0[2]
+            let value = $0[1]
             history.append((date, value))
         }
 
         return history
+    }
+}
+
+extension DataManager {
+    func getBallances() async throws ->  [Ballance] {
+        let cryptoRates = try await getCryptoRates()
+
+        var ballances: [Ballance] = []
+        var availableCurrencies = Currency.allCases.suffix(from: 2)
+        let currenciesInWallet = Int.random(in: 0..<availableCurrencies.count)
+        for _ in 0...currenciesInWallet {
+            let index = Int.random(in: availableCurrencies.indices)
+            let currency = availableCurrencies[index]
+            let amount = Double.random(in: 0.1...10.0)
+            let amountInUsd = amount * (cryptoRates[currency] ?? 0)
+
+            ballances.append(.init(currency: currency, amount: amount, amountInUsd: amountInUsd))
+            availableCurrencies.remove(at: index)
+        }
+
+        return ballances
     }
 }
 
