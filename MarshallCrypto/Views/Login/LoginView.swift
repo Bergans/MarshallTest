@@ -15,20 +15,18 @@ struct LoginView: View {
     }
     
     var body: some View {
-        if let error = viewModel.error {
-            HStack(alignment: .top) {
-                Text(error)
-                Spacer()
-                Button(
-                    action: { viewModel.error = nil },
-                    label: { Image(systemName: "xmark") })
+        VStack {
+            ErrorView(errorText: $viewModel.error)
+
+            Text("Marshall Crypto")
+                .font(.largeTitle)
+
+            Button("Login") {
+                viewModel.login()
             }
+            .buttonStyle(.borderedProminent)
         }
-        
-        Text("Login Screen")
-        Button("Login") {
-            viewModel.login()
-        }
+        .padding(.horizontal, 16)
     }
 }
 

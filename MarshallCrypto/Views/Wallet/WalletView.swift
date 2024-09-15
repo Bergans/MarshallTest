@@ -17,43 +17,46 @@ struct WalletView: View {
 
     var body: some View {
         ScrollView {
-            if let error = viewModel.error {
-                HStack(alignment: .top) {
-                    Text(error)
-                    Spacer()
-                    Button(
-                        action: { viewModel.error = nil },
-                        label: { Image(systemName: "xmark") })
-                }
-            }
-            Picker("", selection: $viewModel.currency) {
-                ForEach(viewModel.availableCurrencies) {
-                    Text($0.name).tag($0)
-                }
-            }
-            .pickerStyle(.segmented)
-
-            Text("Total: \(viewModel.total)")
-            Grid(alignment: .leading) {
-                GridRow {
-                    Text("Crypto Currency").bold()
-                    Text("Amount").bold()
-                    Text("$").bold()
-                }
-
-                ForEach(viewModel.ballances, id: \.self.currency) { ballance in
-                    GridRow {
-                        Text(ballance.currency.name)
-                        Text(ballance.displayAmount)
-                        Text(ballance.amountInUsd.asCurrency(.usd))
+            VStack(alignment: .leading) {
+                ErrorView(errorText: $viewModel.error)
+                Picker("", selection: $viewModel.currency) {
+                    ForEach(viewModel.availableCurrencies) {
+                        Text($0.name)
+                            .tag($0)
                     }
-                    .onTapGesture {
-                        currencyHistory = ballance.currency
+                }
+                .pickerStyle(.segmented)
+
+                Text("Total: \(viewModel.total)")
+                    .font(.largeTitle)
+                    .padding(.bottom, 16)
+                Grid(alignment: .leading) {
+                    GridRow {
+                        Text("Crypto Currency")
+                            .bold()
+                            .padding(.trailing, 16)
+                        Text("Amount")
+                            .bold()
+                            .padding(.trailing, 16)
+                        Text("$")
+                            .bold()
+                            .padding(.trailing, 16)
+                    }
+
+                    ForEach(viewModel.ballances, id: \.self.currency) { ballance in
+                        GridRow {
+                            Text(ballance.currency.name)
+                            Text(ballance.displayAmount)
+                            Text(ballance.amountInUsd.asCurrency(.usd))
+                        }
+                        .onTapGesture {
+                            currencyHistory = ballance.currency
+                        }
                     }
                 }
             }
         }
-        .toolbarVisibility(.visible, for: .navigationBar)
+        .padding(.horizontal, 16)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Logout") {
