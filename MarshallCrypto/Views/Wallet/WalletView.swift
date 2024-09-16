@@ -78,6 +78,7 @@ struct WalletView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     let managerProvider = MockManagerProvider()
     (managerProvider.userManager as? MockUserManager)?.ballances = [
@@ -87,3 +88,4 @@ struct WalletView: View {
 
     return WalletView(viewModel: .init(managerProvider: managerProvider))
 }
+#endif

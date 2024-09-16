@@ -30,6 +30,8 @@ struct LoginView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     LoginView(viewModel: .init(managerProvider: MockManagerProvider()))
 }
+#endif
