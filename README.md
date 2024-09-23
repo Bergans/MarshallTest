@@ -2,7 +2,7 @@
 
 ## Description
 - App generates "new" User when login and creates different balances for it
-- Build with Xcode 16.0 RC, Deployment target iOS 18
+- Build with XCode 15.4 or XCode 16.0, Deployment target iOS 17
 
 ## API
 - To get crypto exchange rates https://api.wazirx.com/sapi/v1/tickers/24hr
