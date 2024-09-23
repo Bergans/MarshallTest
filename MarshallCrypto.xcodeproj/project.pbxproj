@@ -3,66 +3,94 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D7DA75A92CA1DE0000B68D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DA75A82CA1DE0000B68D2D /* Assets.xcassets */; };
+		D7DA75AC2CA1DE0000B68D2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DA75AB2CA1DE0000B68D2D /* Preview Assets.xcassets */; };
+		D7DA75F12CA1DF7900B68D2D /* BinanceKlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75CE2CA1DF7900B68D2D /* BinanceKlines.swift */; };
+		D7DA75F22CA1DF7900B68D2D /* ErAPILatest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75CF2CA1DF7900B68D2D /* ErAPILatest.swift */; };
+		D7DA75F32CA1DF7900B68D2D /* WazirxTickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75D02CA1DF7900B68D2D /* WazirxTickers.swift */; };
+		D7DA75F42CA1DF7900B68D2D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75D22CA1DF7900B68D2D /* APIManager.swift */; };
+		D7DA75F52CA1DF7900B68D2D /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75D32CA1DF7900B68D2D /* Endpoints.swift */; };
+		D7DA75F62CA1DF7900B68D2D /* MockAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75D52CA1DF7900B68D2D /* MockAPIManager.swift */; };
+		D7DA75F72CA1DF7900B68D2D /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75D62CA1DF7900B68D2D /* MockDataManager.swift */; };
+		D7DA75F82CA1DF7900B68D2D /* MockManagerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75D72CA1DF7900B68D2D /* MockManagerProvider.swift */; };
+		D7DA75F92CA1DF7900B68D2D /* MockUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75D82CA1DF7900B68D2D /* MockUserManager.swift */; };
+		D7DA75FA2CA1DF7900B68D2D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75DA2CA1DF7900B68D2D /* DataManager.swift */; };
+		D7DA75FB2CA1DF7900B68D2D /* ManagerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75DB2CA1DF7900B68D2D /* ManagerProvider.swift */; };
+		D7DA75FC2CA1DF7900B68D2D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75DC2CA1DF7900B68D2D /* UserManager.swift */; };
+		D7DA75FD2CA1DF7900B68D2D /* MarshallCryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75DE2CA1DF7900B68D2D /* MarshallCryptoApp.swift */; };
+		D7DA75FE2CA1DF7900B68D2D /* MarshallCryptoAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75DF2CA1DF7900B68D2D /* MarshallCryptoAppModel.swift */; };
+		D7DA75FF2CA1DF7900B68D2D /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75E12CA1DF7900B68D2D /* HistoryView.swift */; };
+		D7DA76002CA1DF7900B68D2D /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75E22CA1DF7900B68D2D /* HistoryViewModel.swift */; };
+		D7DA76012CA1DF7900B68D2D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75E42CA1DF7900B68D2D /* LoginView.swift */; };
+		D7DA76022CA1DF7900B68D2D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75E52CA1DF7900B68D2D /* LoginViewModel.swift */; };
+		D7DA76032CA1DF7900B68D2D /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75E72CA1DF7900B68D2D /* WalletView.swift */; };
+		D7DA76042CA1DF7900B68D2D /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75E82CA1DF7900B68D2D /* WalletViewModel.swift */; };
+		D7DA76052CA1DF7900B68D2D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75EA2CA1DF7900B68D2D /* ErrorView.swift */; };
+		D7DA76062CA1DF7900B68D2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DA75EC2CA1DF7900B68D2D /* Preview Assets.xcassets */; };
+		D7DA76072CA1DF7900B68D2D /* Ballance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75EE2CA1DF7900B68D2D /* Ballance.swift */; };
+		D7DA76082CA1DF7900B68D2D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA75EF2CA1DF7900B68D2D /* Currency.swift */; };
+		D7DA760C2CA1E13700B68D2D /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA76092CA1E13700B68D2D /* DataManagerTests.swift */; };
+		D7DA760D2CA1E13700B68D2D /* WalletViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA760A2CA1E13700B68D2D /* WalletViewModelTests.swift */; };
+		D7DA760E2CA1E13700B68D2D /* UserManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA760B2CA1E13700B68D2D /* UserManagerTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
-		D7BABB382C96C9B100798BE5 /* PBXContainerItemProxy */ = {
+		D7DA75B22CA1DE0000B68D2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D7BABB1F2C96C9B000798BE5 /* Project object */;
+			containerPortal = D7DA75992CA1DDFE00B68D2D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D7BABB262C96C9B000798BE5;
-			remoteInfo = MarshallCrypto;
-		};
-		D7BABB422C96C9B100798BE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D7BABB1F2C96C9B000798BE5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D7BABB262C96C9B000798BE5;
+			remoteGlobalIDString = D7DA75A02CA1DDFE00B68D2D;
 			remoteInfo = MarshallCrypto;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D7BABB272C96C9B000798BE5 /* MarshallCrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarshallCrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7BABB372C96C9B100798BE5 /* MarshallCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarshallCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7BABB412C96C9B100798BE5 /* MarshallCryptoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarshallCryptoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DA75A12CA1DDFF00B68D2D /* MarshallCrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarshallCrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DA75A82CA1DE0000B68D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7DA75AB2CA1DE0000B68D2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D7DA75B12CA1DE0000B68D2D /* MarshallCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarshallCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DA75CE2CA1DF7900B68D2D /* BinanceKlines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinanceKlines.swift; sourceTree = "<group>"; };
+		D7DA75CF2CA1DF7900B68D2D /* ErAPILatest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErAPILatest.swift; sourceTree = "<group>"; };
+		D7DA75D02CA1DF7900B68D2D /* WazirxTickers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WazirxTickers.swift; sourceTree = "<group>"; };
+		D7DA75D22CA1DF7900B68D2D /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		D7DA75D32CA1DF7900B68D2D /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		D7DA75D52CA1DF7900B68D2D /* MockAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAPIManager.swift; sourceTree = "<group>"; };
+		D7DA75D62CA1DF7900B68D2D /* MockDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
+		D7DA75D72CA1DF7900B68D2D /* MockManagerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockManagerProvider.swift; sourceTree = "<group>"; };
+		D7DA75D82CA1DF7900B68D2D /* MockUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUserManager.swift; sourceTree = "<group>"; };
+		D7DA75DA2CA1DF7900B68D2D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D7DA75DB2CA1DF7900B68D2D /* ManagerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerProvider.swift; sourceTree = "<group>"; };
+		D7DA75DC2CA1DF7900B68D2D /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		D7DA75DE2CA1DF7900B68D2D /* MarshallCryptoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarshallCryptoApp.swift; sourceTree = "<group>"; };
+		D7DA75DF2CA1DF7900B68D2D /* MarshallCryptoAppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarshallCryptoAppModel.swift; sourceTree = "<group>"; };
+		D7DA75E12CA1DF7900B68D2D /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		D7DA75E22CA1DF7900B68D2D /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		D7DA75E42CA1DF7900B68D2D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D7DA75E52CA1DF7900B68D2D /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D7DA75E72CA1DF7900B68D2D /* WalletView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		D7DA75E82CA1DF7900B68D2D /* WalletViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		D7DA75EA2CA1DF7900B68D2D /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		D7DA75EC2CA1DF7900B68D2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D7DA75EE2CA1DF7900B68D2D /* Ballance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ballance.swift; sourceTree = "<group>"; };
+		D7DA75EF2CA1DF7900B68D2D /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		D7DA76092CA1E13700B68D2D /* DataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		D7DA760A2CA1E13700B68D2D /* WalletViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewModelTests.swift; sourceTree = "<group>"; };
+		D7DA760B2CA1E13700B68D2D /* UserManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		D7BABB292C96C9B000798BE5 /* MarshallCrypto */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MarshallCrypto;
-			sourceTree = "<group>";
-		};
-		D7BABB3A2C96C9B100798BE5 /* MarshallCryptoTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MarshallCryptoTests;
-			sourceTree = "<group>";
-		};
-		D7BABB442C96C9B100798BE5 /* MarshallCryptoUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MarshallCryptoUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		D7BABB242C96C9B000798BE5 /* Frameworks */ = {
+		D7DA759E2CA1DDFE00B68D2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7BABB342C96C9B100798BE5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7BABB3E2C96C9B100798BE5 /* Frameworks */ = {
+		D7DA75AE2CA1DE0000B68D2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,157 +100,252 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D7BABB1E2C96C9B000798BE5 = {
+		D7DA75982CA1DDFE00B68D2D = {
 			isa = PBXGroup;
 			children = (
-				D7BABB292C96C9B000798BE5 /* MarshallCrypto */,
-				D7BABB3A2C96C9B100798BE5 /* MarshallCryptoTests */,
-				D7BABB442C96C9B100798BE5 /* MarshallCryptoUITests */,
-				D7BABB282C96C9B000798BE5 /* Products */,
+				D7DA75A32CA1DDFF00B68D2D /* MarshallCrypto */,
+				D7DA75B42CA1DE0000B68D2D /* MarshallCryptoTests */,
+				D7DA75A22CA1DDFF00B68D2D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D7BABB282C96C9B000798BE5 /* Products */ = {
+		D7DA75A22CA1DDFF00B68D2D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7BABB272C96C9B000798BE5 /* MarshallCrypto.app */,
-				D7BABB372C96C9B100798BE5 /* MarshallCryptoTests.xctest */,
-				D7BABB412C96C9B100798BE5 /* MarshallCryptoUITests.xctest */,
+				D7DA75A12CA1DDFF00B68D2D /* MarshallCrypto.app */,
+				D7DA75B12CA1DE0000B68D2D /* MarshallCryptoTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D7DA75A32CA1DDFF00B68D2D /* MarshallCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75DD2CA1DF7900B68D2D /* Managers */,
+				D7DA75F02CA1DF7900B68D2D /* Models */,
+				D7DA75ED2CA1DF7900B68D2D /* Preview Content */,
+				D7DA75EB2CA1DF7900B68D2D /* Views */,
+				D7DA75A82CA1DE0000B68D2D /* Assets.xcassets */,
+				D7DA75AA2CA1DE0000B68D2D /* Preview Content */,
+			);
+			path = MarshallCrypto;
+			sourceTree = "<group>";
+		};
+		D7DA75AA2CA1DE0000B68D2D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75AB2CA1DE0000B68D2D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D7DA75B42CA1DE0000B68D2D /* MarshallCryptoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA76092CA1E13700B68D2D /* DataManagerTests.swift */,
+				D7DA760B2CA1E13700B68D2D /* UserManagerTests.swift */,
+				D7DA760A2CA1E13700B68D2D /* WalletViewModelTests.swift */,
+			);
+			path = MarshallCryptoTests;
+			sourceTree = "<group>";
+		};
+		D7DA75D12CA1DF7900B68D2D /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75CE2CA1DF7900B68D2D /* BinanceKlines.swift */,
+				D7DA75CF2CA1DF7900B68D2D /* ErAPILatest.swift */,
+				D7DA75D02CA1DF7900B68D2D /* WazirxTickers.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		D7DA75D42CA1DF7900B68D2D /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75D12CA1DF7900B68D2D /* Responses */,
+				D7DA75D22CA1DF7900B68D2D /* APIManager.swift */,
+				D7DA75D32CA1DF7900B68D2D /* Endpoints.swift */,
+			);
+			path = ApiManager;
+			sourceTree = "<group>";
+		};
+		D7DA75D92CA1DF7900B68D2D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75D52CA1DF7900B68D2D /* MockAPIManager.swift */,
+				D7DA75D62CA1DF7900B68D2D /* MockDataManager.swift */,
+				D7DA75D72CA1DF7900B68D2D /* MockManagerProvider.swift */,
+				D7DA75D82CA1DF7900B68D2D /* MockUserManager.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D7DA75DD2CA1DF7900B68D2D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75D42CA1DF7900B68D2D /* ApiManager */,
+				D7DA75D92CA1DF7900B68D2D /* Mocks */,
+				D7DA75DA2CA1DF7900B68D2D /* DataManager.swift */,
+				D7DA75DB2CA1DF7900B68D2D /* ManagerProvider.swift */,
+				D7DA75DC2CA1DF7900B68D2D /* UserManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D7DA75E02CA1DF7900B68D2D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75DE2CA1DF7900B68D2D /* MarshallCryptoApp.swift */,
+				D7DA75DF2CA1DF7900B68D2D /* MarshallCryptoAppModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D7DA75E32CA1DF7900B68D2D /* History */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75E12CA1DF7900B68D2D /* HistoryView.swift */,
+				D7DA75E22CA1DF7900B68D2D /* HistoryViewModel.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		D7DA75E62CA1DF7900B68D2D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75E42CA1DF7900B68D2D /* LoginView.swift */,
+				D7DA75E52CA1DF7900B68D2D /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D7DA75E92CA1DF7900B68D2D /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75E72CA1DF7900B68D2D /* WalletView.swift */,
+				D7DA75E82CA1DF7900B68D2D /* WalletViewModel.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		D7DA75EB2CA1DF7900B68D2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75E02CA1DF7900B68D2D /* App */,
+				D7DA75E32CA1DF7900B68D2D /* History */,
+				D7DA75E62CA1DF7900B68D2D /* Login */,
+				D7DA75E92CA1DF7900B68D2D /* Wallet */,
+				D7DA75EA2CA1DF7900B68D2D /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D7DA75ED2CA1DF7900B68D2D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75EC2CA1DF7900B68D2D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D7DA75F02CA1DF7900B68D2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA75EE2CA1DF7900B68D2D /* Ballance.swift */,
+				D7DA75EF2CA1DF7900B68D2D /* Currency.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D7BABB262C96C9B000798BE5 /* MarshallCrypto */ = {
+		D7DA75A02CA1DDFE00B68D2D /* MarshallCrypto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7BABB4B2C96C9B100798BE5 /* Build configuration list for PBXNativeTarget "MarshallCrypto" */;
+			buildConfigurationList = D7DA75C52CA1DE0000B68D2D /* Build configuration list for PBXNativeTarget "MarshallCrypto" */;
 			buildPhases = (
-				D7BABB232C96C9B000798BE5 /* Sources */,
-				D7BABB242C96C9B000798BE5 /* Frameworks */,
-				D7BABB252C96C9B000798BE5 /* Resources */,
+				D7DA759D2CA1DDFE00B68D2D /* Sources */,
+				D7DA759E2CA1DDFE00B68D2D /* Frameworks */,
+				D7DA759F2CA1DDFE00B68D2D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				D7BABB292C96C9B000798BE5 /* MarshallCrypto */,
 			);
 			name = MarshallCrypto;
-			packageProductDependencies = (
-			);
 			productName = MarshallCrypto;
-			productReference = D7BABB272C96C9B000798BE5 /* MarshallCrypto.app */;
+			productReference = D7DA75A12CA1DDFF00B68D2D /* MarshallCrypto.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D7BABB362C96C9B100798BE5 /* MarshallCryptoTests */ = {
+		D7DA75B02CA1DE0000B68D2D /* MarshallCryptoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7BABB4E2C96C9B100798BE5 /* Build configuration list for PBXNativeTarget "MarshallCryptoTests" */;
+			buildConfigurationList = D7DA75C82CA1DE0000B68D2D /* Build configuration list for PBXNativeTarget "MarshallCryptoTests" */;
 			buildPhases = (
-				D7BABB332C96C9B100798BE5 /* Sources */,
-				D7BABB342C96C9B100798BE5 /* Frameworks */,
-				D7BABB352C96C9B100798BE5 /* Resources */,
+				D7DA75AD2CA1DE0000B68D2D /* Sources */,
+				D7DA75AE2CA1DE0000B68D2D /* Frameworks */,
+				D7DA75AF2CA1DE0000B68D2D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D7BABB392C96C9B100798BE5 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D7BABB3A2C96C9B100798BE5 /* MarshallCryptoTests */,
+				D7DA75B32CA1DE0000B68D2D /* PBXTargetDependency */,
 			);
 			name = MarshallCryptoTests;
-			packageProductDependencies = (
-			);
 			productName = MarshallCryptoTests;
-			productReference = D7BABB372C96C9B100798BE5 /* MarshallCryptoTests.xctest */;
+			productReference = D7DA75B12CA1DE0000B68D2D /* MarshallCryptoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D7BABB402C96C9B100798BE5 /* MarshallCryptoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D7BABB512C96C9B100798BE5 /* Build configuration list for PBXNativeTarget "MarshallCryptoUITests" */;
-			buildPhases = (
-				D7BABB3D2C96C9B100798BE5 /* Sources */,
-				D7BABB3E2C96C9B100798BE5 /* Frameworks */,
-				D7BABB3F2C96C9B100798BE5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D7BABB432C96C9B100798BE5 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D7BABB442C96C9B100798BE5 /* MarshallCryptoUITests */,
-			);
-			name = MarshallCryptoUITests;
-			packageProductDependencies = (
-			);
-			productName = MarshallCryptoUITests;
-			productReference = D7BABB412C96C9B100798BE5 /* MarshallCryptoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D7BABB1F2C96C9B000798BE5 /* Project object */ = {
+		D7DA75992CA1DDFE00B68D2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					D7BABB262C96C9B000798BE5 = {
-						CreatedOnToolsVersion = 16.0;
+					D7DA75A02CA1DDFE00B68D2D = {
+						CreatedOnToolsVersion = 15.4;
 					};
-					D7BABB362C96C9B100798BE5 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = D7BABB262C96C9B000798BE5;
-					};
-					D7BABB402C96C9B100798BE5 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = D7BABB262C96C9B000798BE5;
+					D7DA75B02CA1DE0000B68D2D = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+						TestTargetID = D7DA75A02CA1DDFE00B68D2D;
 					};
 				};
 			};
-			buildConfigurationList = D7BABB222C96C9B000798BE5 /* Build configuration list for PBXProject "MarshallCrypto" */;
+			buildConfigurationList = D7DA759C2CA1DDFE00B68D2D /* Build configuration list for PBXProject "MarshallCrypto" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = D7BABB1E2C96C9B000798BE5;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = D7BABB282C96C9B000798BE5 /* Products */;
+			mainGroup = D7DA75982CA1DDFE00B68D2D;
+			productRefGroup = D7DA75A22CA1DDFF00B68D2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D7BABB262C96C9B000798BE5 /* MarshallCrypto */,
-				D7BABB362C96C9B100798BE5 /* MarshallCryptoTests */,
-				D7BABB402C96C9B100798BE5 /* MarshallCryptoUITests */,
+				D7DA75A02CA1DDFE00B68D2D /* MarshallCrypto */,
+				D7DA75B02CA1DE0000B68D2D /* MarshallCryptoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D7BABB252C96C9B000798BE5 /* Resources */ = {
+		D7DA759F2CA1DDFE00B68D2D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7DA75AC2CA1DE0000B68D2D /* Preview Assets.xcassets in Resources */,
+				D7DA76062CA1DF7900B68D2D /* Preview Assets.xcassets in Resources */,
+				D7DA75A92CA1DE0000B68D2D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7BABB352C96C9B100798BE5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7BABB3F2C96C9B100798BE5 /* Resources */ = {
+		D7DA75AF2CA1DE0000B68D2D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,44 +355,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D7BABB232C96C9B000798BE5 /* Sources */ = {
+		D7DA759D2CA1DDFE00B68D2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7DA75F42CA1DF7900B68D2D /* APIManager.swift in Sources */,
+				D7DA75FA2CA1DF7900B68D2D /* DataManager.swift in Sources */,
+				D7DA75FE2CA1DF7900B68D2D /* MarshallCryptoAppModel.swift in Sources */,
+				D7DA76072CA1DF7900B68D2D /* Ballance.swift in Sources */,
+				D7DA76032CA1DF7900B68D2D /* WalletView.swift in Sources */,
+				D7DA76052CA1DF7900B68D2D /* ErrorView.swift in Sources */,
+				D7DA75F22CA1DF7900B68D2D /* ErAPILatest.swift in Sources */,
+				D7DA75F62CA1DF7900B68D2D /* MockAPIManager.swift in Sources */,
+				D7DA75FB2CA1DF7900B68D2D /* ManagerProvider.swift in Sources */,
+				D7DA75F72CA1DF7900B68D2D /* MockDataManager.swift in Sources */,
+				D7DA75FF2CA1DF7900B68D2D /* HistoryView.swift in Sources */,
+				D7DA76022CA1DF7900B68D2D /* LoginViewModel.swift in Sources */,
+				D7DA75FC2CA1DF7900B68D2D /* UserManager.swift in Sources */,
+				D7DA75F82CA1DF7900B68D2D /* MockManagerProvider.swift in Sources */,
+				D7DA76082CA1DF7900B68D2D /* Currency.swift in Sources */,
+				D7DA76012CA1DF7900B68D2D /* LoginView.swift in Sources */,
+				D7DA75F32CA1DF7900B68D2D /* WazirxTickers.swift in Sources */,
+				D7DA75F12CA1DF7900B68D2D /* BinanceKlines.swift in Sources */,
+				D7DA75FD2CA1DF7900B68D2D /* MarshallCryptoApp.swift in Sources */,
+				D7DA75F52CA1DF7900B68D2D /* Endpoints.swift in Sources */,
+				D7DA76042CA1DF7900B68D2D /* WalletViewModel.swift in Sources */,
+				D7DA75F92CA1DF7900B68D2D /* MockUserManager.swift in Sources */,
+				D7DA76002CA1DF7900B68D2D /* HistoryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7BABB332C96C9B100798BE5 /* Sources */ = {
+		D7DA75AD2CA1DE0000B68D2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7BABB3D2C96C9B100798BE5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				D7DA760E2CA1E13700B68D2D /* UserManagerTests.swift in Sources */,
+				D7DA760C2CA1E13700B68D2D /* DataManagerTests.swift in Sources */,
+				D7DA760D2CA1E13700B68D2D /* WalletViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D7BABB392C96C9B100798BE5 /* PBXTargetDependency */ = {
+		D7DA75B32CA1DE0000B68D2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D7BABB262C96C9B000798BE5 /* MarshallCrypto */;
-			targetProxy = D7BABB382C96C9B100798BE5 /* PBXContainerItemProxy */;
-		};
-		D7BABB432C96C9B100798BE5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D7BABB262C96C9B000798BE5 /* MarshallCrypto */;
-			targetProxy = D7BABB422C96C9B100798BE5 /* PBXContainerItemProxy */;
+			target = D7DA75A02CA1DDFE00B68D2D /* MarshallCrypto */;
+			targetProxy = D7DA75B22CA1DE0000B68D2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		D7BABB492C96C9B100798BE5 /* Debug */ = {
+		D7DA75C32CA1DE0000B68D2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -321,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -332,7 +469,7 @@
 			};
 			name = Debug;
 		};
-		D7BABB4A2C96C9B100798BE5 /* Release */ = {
+		D7DA75C42CA1DE0000B68D2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -378,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -388,7 +525,7 @@
 			};
 			name = Release;
 		};
-		D7BABB4C2C96C9B100798BE5 /* Debug */ = {
+		D7DA75C62CA1DE0000B68D2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -417,7 +554,7 @@
 			};
 			name = Debug;
 		};
-		D7BABB4D2C96C9B100798BE5 /* Release */ = {
+		D7DA75C72CA1DE0000B68D2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -446,15 +583,39 @@
 			};
 			name = Release;
 		};
-		D7BABB4F2C96C9B100798BE5 /* Debug */ = {
+		D7DA75C92CA1DE0000B68D2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JJXUXLD8GD;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Skry.MarshallCryptoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarshallCrypto.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MarshallCrypto";
+			};
+			name = Debug;
+		};
+		D7DA75CA2CA1DE0000B68D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JJXUXLD8GD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Skry.MarshallCryptoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -462,102 +623,40 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarshallCrypto.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MarshallCrypto";
-			};
-			name = Debug;
-		};
-		D7BABB502C96C9B100798BE5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JJXUXLD8GD;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Skry.MarshallCryptoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarshallCrypto.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MarshallCrypto";
-			};
-			name = Release;
-		};
-		D7BABB522C96C9B100798BE5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JJXUXLD8GD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Skry.MarshallCryptoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MarshallCrypto;
-			};
-			name = Debug;
-		};
-		D7BABB532C96C9B100798BE5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JJXUXLD8GD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Skry.MarshallCryptoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MarshallCrypto;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D7BABB222C96C9B000798BE5 /* Build configuration list for PBXProject "MarshallCrypto" */ = {
+		D7DA759C2CA1DDFE00B68D2D /* Build configuration list for PBXProject "MarshallCrypto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D7BABB492C96C9B100798BE5 /* Debug */,
-				D7BABB4A2C96C9B100798BE5 /* Release */,
+				D7DA75C32CA1DE0000B68D2D /* Debug */,
+				D7DA75C42CA1DE0000B68D2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7BABB4B2C96C9B100798BE5 /* Build configuration list for PBXNativeTarget "MarshallCrypto" */ = {
+		D7DA75C52CA1DE0000B68D2D /* Build configuration list for PBXNativeTarget "MarshallCrypto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D7BABB4C2C96C9B100798BE5 /* Debug */,
-				D7BABB4D2C96C9B100798BE5 /* Release */,
+				D7DA75C62CA1DE0000B68D2D /* Debug */,
+				D7DA75C72CA1DE0000B68D2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7BABB4E2C96C9B100798BE5 /* Build configuration list for PBXNativeTarget "MarshallCryptoTests" */ = {
+		D7DA75C82CA1DE0000B68D2D /* Build configuration list for PBXNativeTarget "MarshallCryptoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D7BABB4F2C96C9B100798BE5 /* Debug */,
-				D7BABB502C96C9B100798BE5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D7BABB512C96C9B100798BE5 /* Build configuration list for PBXNativeTarget "MarshallCryptoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D7BABB522C96C9B100798BE5 /* Debug */,
-				D7BABB532C96C9B100798BE5 /* Release */,
+				D7DA75C92CA1DE0000B68D2D /* Debug */,
+				D7DA75CA2CA1DE0000B68D2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D7BABB1F2C96C9B000798BE5 /* Project object */;
+	rootObject = D7DA75992CA1DDFE00B68D2D /* Project object */;
 }

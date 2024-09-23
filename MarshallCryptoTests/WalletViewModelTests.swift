@@ -5,11 +5,10 @@
 //  Created by Janis Bergs on 2024-09-15.
 //
 
-import Testing
-
+import XCTest
 @testable import MarshallCrypto
 
-struct WalletViewModelTests {
+final class WalletViewModelTests: XCTestCase {
     let managerProvider = MockManagerProvider()
     let ballances: [Ballance] = [
         .init(currency: .btc, amount: 1.23, amountInUsd: 2.34),
@@ -17,15 +16,15 @@ struct WalletViewModelTests {
     ]
 
 
-    @Test func create() async throws {
+    func testCreate() async throws {
         managerProvider.userManager.user.send(true)
         (managerProvider.userManager as? MockUserManager)?.ballances = ballances
 
         let model = WalletViewModel(managerProvider: managerProvider)
-        #expect(model.ballances == ballances)
-        #expect(model.error == nil)
-        #expect(model.availableCurrencies == [.usd, .sek])
-        #expect(model.total == 4.68.asCurrency(.usd))
-        #expect(model.currency == .usd)
+        XCTAssertEqual(model.ballances, ballances)
+        XCTAssertEqual(model.error, nil)
+        XCTAssertEqual(model.availableCurrencies, [.usd, .sek])
+        XCTAssertEqual(model.total, 4.68.asCurrency(.usd))
+        XCTAssertEqual(model.currency, .usd)
     }
 }

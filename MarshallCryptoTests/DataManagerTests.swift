@@ -5,46 +5,47 @@
 //  Created by Janis Bergs on 2024-09-15.
 //
 
-import Testing
+import XCTest
 import Foundation
 @testable import MarshallCrypto
 
-struct DataManagerTests {
+final class DataManagerTests: XCTestCase {
     let apiManager = MockAPIManager()
 
-
-    @Test func getUsdToSek() async {
+    func testGetUsdToSek() async {
         let usdToSek: Double = 10.1
         let dataManager = DataManager(apiManager: apiManager)
-        await #expect(throws: CustomError.unknown) {
-            try await dataManager.getUsdToSek()
+
+        do {
+            _ = try await dataManager.getUsdToSek()
+        } catch {
+            XCTAssertEqual(error as? CustomError, CustomError.unknown)
         }
 
         apiManager.response = ErAPILatest(rates: ["SEK": usdToSek])
-        await #expect(throws: Never.self) {
-            try await dataManager.getUsdToSek() == usdToSek
-        }
+        var usd = try? await dataManager.getUsdToSek()
+        XCTAssertEqual(usd, usdToSek)
 
         apiManager.response = 5.0
-        await #expect(throws: Never.self) {
-            try await dataManager.getUsdToSek() == usdToSek
-        }
+        usd = try? await dataManager.getUsdToSek()
+        XCTAssertEqual(usd, usdToSek)
     }
 
-    @Test func getHistory() async {
+    func testGetHistory() async {
         let dataManager = DataManager(apiManager: apiManager)
-        await #expect(throws: CustomError.unknown) {
-            try await dataManager.getHistory(for: .btc)
+        do {
+            _ = try await dataManager.getHistory(for: .btc)
+        } catch {
+            XCTAssertEqual(error as? CustomError, CustomError.unknown)
         }
 
-        let response: [[Double]] = [
-            [Date().timeIntervalSince1970, 1, 2, 3],
-            [Date(timeIntervalSince1970: 0).timeIntervalSince1970, 1, 2, 3]
+        let response: [[JSONValue]] = [
+            [.int(Int(Date().timeIntervalSince1970)), .string("1"), .string("2"), .string("3")],
+            [.int(Int(Date(timeIntervalSince1970: 0).timeIntervalSince1970)), .string("1"), .string("2"), .string("3")]
         ]
 
         apiManager.response = response
-        await #expect(throws: Never.self) {
-            try await dataManager.getHistory(for: .btc).count == 2
-        }
+        let history = try? await dataManager.getHistory(for: .btc)
+        XCTAssertEqual(history?.count, 2)
     }
 }

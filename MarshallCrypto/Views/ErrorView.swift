@@ -26,6 +26,8 @@ struct ErrorView: View {
 }
 
 #Preview {
-    ErrorView(errorText: .constant("Short error"))
-    ErrorView(errorText: .constant("Long error text that\nshould take multiple lines"))
+    VStack {
+        ErrorView(errorText: .constant("Short error"))
+        ErrorView(errorText: .constant("Long error text that\nshould take multiple lines"))
+    }
 }

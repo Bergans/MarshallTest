@@ -5,32 +5,33 @@
 //  Created by Janis Bergs on 2024-09-15.
 //
 
-import Testing
+import XCTest
 @testable import MarshallCrypto
 
-struct UserManagerTests {
+final class UserManagerTests: XCTestCase {
     let dataManager = MockDataManager()
     let ballances: [Ballance] = [
         .init(currency: .btc, amount: 1.23, amountInUsd: 2.34),
         .init(currency: .eth, amount: 3.45, amountInUsd: 2.34)
     ]
 
-    @Test func login() async throws {
+    func testLogin() async throws {
+        dataManager.ballances = ballances
         let userManager = UserManager(dataManager: dataManager)
-        #expect(userManager.user.value == false)
+        XCTAssertEqual(userManager.user.value, false)
 
         try await userManager.login()
-        #expect(userManager.user.value == true)
-        #expect(userManager.ballances == ballances)
+        XCTAssertEqual(userManager.user.value, true)
+        XCTAssertEqual(userManager.ballances, ballances)
     }
 
-    @Test func logout() async throws {
+    func testLogout() async throws {
         let userManager = UserManager(dataManager: dataManager)
         userManager.user.send(true)
         userManager.ballances = ballances
 
         userManager.logout()
-        #expect(userManager.user.value == false)
-        #expect(userManager.ballances == [])
+        XCTAssertEqual(userManager.user.value, false)
+        XCTAssertEqual(userManager.ballances, [])
     }
 }
